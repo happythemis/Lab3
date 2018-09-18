@@ -8,10 +8,15 @@ public class lab3anotherclass {
         //System.out.println("Hee");
         urlToString("http://erdani.com/tdpl/hamlet.txt");
         String[] array = urlToString("http://erdani.com/tdpl/hamlet.txt").split("\\s+");
-        System.out.println(array.length);
+        System.out.println("total word count: " + array.length);
         int countspecific = 0;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the word you want to find: ");
+        String getinput = input.nextLine();
+
+
         for (int i = 0; i < array.length; i++) {
-            if (array[i].toUpperCase().contains("PRINCE")) {
+            if (array[i].toUpperCase().contains(getinput.toUpperCase())) {
                 countspecific++;
             }
         }
